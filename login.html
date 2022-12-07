@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+    <script>
+        function login()
+        {
+            var us = document.getElementById("username").value;
+            var ps = document.getElementById("password").value;
+            //console.log(us);
+            document.write(us);
+            
+            document.write(ps);
+            if(us=="abhay.22010481@viit.ac.in" && ps=="abhay1234")
+            {
+                window.location.href="Index.html";
+            }
+            else{
+                alert("Enter Proper Login Credentials !!");
+            }
+        }
+
+        function signup()
+        {
+            window.location.href="Registration.html";
+        }
+    </script>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <b><h3>Login</h3></b>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <input type="button" value="Login" onclick="login()">
+        <input type="button" value="Sign Up" onclick="signup()">
+    </form>
+</body>
+</html>
